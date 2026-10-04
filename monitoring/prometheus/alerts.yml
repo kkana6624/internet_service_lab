@@ -1,0 +1,23 @@
+groups:
+  - name: lifecycle
+    rules:
+      - alert: ProbeFailed
+        expr: probe_success{job="blackbox"} == 0
+        for: 30s
+        labels: {severity: warning}
+        annotations: {summary: 'Internal HTTP probe failed: {{ $labels.instance }}'}
+      - alert: ScrapeDown
+        expr: up == 0
+        for: 30s
+        labels: {severity: warning}
+        annotations: {summary: 'Scrape failed: {{ $labels.instance }}'}
+      - alert: ProbeSlow
+        expr: probe_duration_seconds{job="blackbox"} > 1
+        for: 30s
+        labels: {severity: warning}
+        annotations: {summary: 'Single internal probe duration exceeds 1 second'}
+      - alert: DiskLow
+        expr: node_filesystem_avail_bytes{fstype!~"tmpfs|overlay"} / node_filesystem_size_bytes < 0.15
+        for: 5m
+        labels: {severity: warning}
+        annotations: {summary: 'Disk free below 15%'}

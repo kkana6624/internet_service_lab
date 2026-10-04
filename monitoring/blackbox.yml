@@ -1,0 +1,10 @@
+modules:
+  http_2xx:
+    prober: http
+    timeout: 5s
+    http:
+      preferred_ip_protocol: ip4
+      # Canonical WordPress Host, while TCP stays on the Private IP target.
+      # Never follow a redirect onto the public route and call it internal.
+      follow_redirects: false
+      headers: {Host: SERVICE_PUBLIC_HOST, User-Agent: internet-service-lab-internal-probe}

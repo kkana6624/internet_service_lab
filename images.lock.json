@@ -1,0 +1,421 @@
+{
+  "nginx": {
+    "image": "docker.io/library/nginx@sha256:b972f831f200b19ef0767938224f9711e74cd783718738cd7405d5cabf75c442",
+    "tag": "stable",
+    "platforms": [
+      {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      {
+        "architecture": "unknown",
+        "os": "unknown"
+      },
+      {
+        "architecture": "arm",
+        "os": "linux",
+        "variant": "v5"
+      },
+      {
+        "architecture": "unknown",
+        "os": "unknown"
+      },
+      {
+        "architecture": "arm",
+        "os": "linux",
+        "variant": "v7"
+      },
+      {
+        "architecture": "unknown",
+        "os": "unknown"
+      },
+      {
+        "architecture": "arm64",
+        "os": "linux",
+        "variant": "v8"
+      },
+      {
+        "architecture": "unknown",
+        "os": "unknown"
+      },
+      {
+        "architecture": "386",
+        "os": "linux"
+      },
+      {
+        "architecture": "unknown",
+        "os": "unknown"
+      },
+      {
+        "architecture": "ppc64le",
+        "os": "linux"
+      },
+      {
+        "architecture": "unknown",
+        "os": "unknown"
+      },
+      {
+        "architecture": "riscv64",
+        "os": "linux"
+      },
+      {
+        "architecture": "unknown",
+        "os": "unknown"
+      },
+      {
+        "architecture": "s390x",
+        "os": "linux"
+      },
+      {
+        "architecture": "unknown",
+        "os": "unknown"
+      }
+    ],
+    "metadata": {
+      "Env": [
+        "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "NGINX_VERSION=1.30.5",
+        "NJS_VERSION=1.0.1",
+        "NJS_RELEASE=1~trixie",
+        "ACME_VERSION=0.4.1",
+        "PKG_RELEASE=1~trixie",
+        "DYNPKG_RELEASE=1~trixie"
+      ],
+      "Labels": {
+        "maintainer": "NGINX Docker Maintainers <docker-maint@nginx.com>"
+      }
+    },
+    "verified_at": "2026-10-04",
+    "verification": "registry index/config amd64 inspected; container execution not performed",
+    "version": "1.30.5"
+  },
+  "wordpress": {
+    "image": "docker.io/library/wordpress@sha256:4abf7a450ee477dde967584f8174d7e03221d224c4971a0c38d84e7254426e64",
+    "tag": "php8.3-apache",
+    "platforms": [
+      {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      {
+        "architecture": "unknown",
+        "os": "unknown"
+      },
+      {
+        "architecture": "arm",
+        "os": "linux",
+        "variant": "v5"
+      },
+      {
+        "architecture": "unknown",
+        "os": "unknown"
+      },
+      {
+        "architecture": "arm",
+        "os": "linux",
+        "variant": "v7"
+      },
+      {
+        "architecture": "unknown",
+        "os": "unknown"
+      },
+      {
+        "architecture": "arm64",
+        "os": "linux",
+        "variant": "v8"
+      },
+      {
+        "architecture": "unknown",
+        "os": "unknown"
+      },
+      {
+        "architecture": "386",
+        "os": "linux"
+      },
+      {
+        "architecture": "unknown",
+        "os": "unknown"
+      },
+      {
+        "architecture": "ppc64le",
+        "os": "linux"
+      },
+      {
+        "architecture": "unknown",
+        "os": "unknown"
+      },
+      {
+        "architecture": "riscv64",
+        "os": "linux"
+      },
+      {
+        "architecture": "unknown",
+        "os": "unknown"
+      },
+      {
+        "architecture": "s390x",
+        "os": "linux"
+      },
+      {
+        "architecture": "unknown",
+        "os": "unknown"
+      }
+    ],
+    "metadata": {
+      "Env": [
+        "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "PHPIZE_DEPS=autoconf \t\tdpkg-dev \t\tfile \t\tg++ \t\tgcc \t\tlibc-dev \t\tmake \t\tpkg-config \t\tre2c",
+        "PHP_INI_DIR=/usr/local/etc/php",
+        "APACHE_CONFDIR=/etc/apache2",
+        "APACHE_ENVVARS=/etc/apache2/envvars",
+        "PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64",
+        "PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64",
+        "PHP_LDFLAGS=-Wl,-O1 -pie",
+        "GPG_KEYS=1198C0117593497A5EC5C199286AF1F9897469DC C28D937575603EB4ABB725861C0779DC5C0A9DE4 AFD8691FDAEDF03BDF6E460563F15A9B715376CA",
+        "PHP_VERSION=8.3.35",
+        "PHP_URL=https://www.php.net/distributions/php-8.3.35.tar.xz",
+        "PHP_ASC_URL=https://www.php.net/distributions/php-8.3.35.tar.xz.asc",
+        "PHP_SHA256=ff4630fbbbd94359134b7d3c223db59329905bdc4f5a9ef93d257b48e358619a"
+      ],
+      "Labels": null
+    },
+    "verified_at": "2026-10-04",
+    "verification": "registry index/config amd64 inspected; container execution not performed",
+    "version": "7.1.2 (PHP 8.3.35)"
+  },
+  "mariadb": {
+    "image": "docker.io/library/mariadb@sha256:2bdff1534a7e569fecaf4b10b66ad0d410806e382d9db29ba305448addda97c4",
+    "tag": "lts",
+    "platforms": [
+      {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      {
+        "architecture": "unknown",
+        "os": "unknown"
+      },
+      {
+        "architecture": "arm64",
+        "os": "linux",
+        "variant": "v8"
+      },
+      {
+        "architecture": "unknown",
+        "os": "unknown"
+      },
+      {
+        "architecture": "ppc64le",
+        "os": "linux"
+      },
+      {
+        "architecture": "unknown",
+        "os": "unknown"
+      },
+      {
+        "architecture": "s390x",
+        "os": "linux"
+      },
+      {
+        "architecture": "unknown",
+        "os": "unknown"
+      }
+    ],
+    "metadata": {
+      "Env": [
+        "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "GOSU_VERSION=1.19",
+        "LANG=C.UTF-8",
+        "MARIADB_VERSION=1:12.3.3+maria~ubu2404"
+      ],
+      "Labels": {
+        "org.opencontainers.image.authors": "MariaDB Community",
+        "org.opencontainers.image.base.name": "docker.io/library/ubuntu:noble",
+        "org.opencontainers.image.description": "MariaDB Database for relational SQL",
+        "org.opencontainers.image.documentation": "https://hub.docker.com/_/mariadb/",
+        "org.opencontainers.image.licenses": "GPL-2.0",
+        "org.opencontainers.image.source": "https://github.com/MariaDB/mariadb-docker",
+        "org.opencontainers.image.title": "MariaDB Database",
+        "org.opencontainers.image.url": "https://github.com/MariaDB/mariadb-docker",
+        "org.opencontainers.image.vendor": "MariaDB Community",
+        "org.opencontainers.image.version": "12.3.3"
+      }
+    },
+    "verified_at": "2026-10-04",
+    "verification": "registry index/config amd64 inspected; container execution not performed",
+    "version": "12.3.3"
+  },
+  "prometheus": {
+    "image": "docker.io/prom/prometheus@sha256:efd719c99d83b060d9daefdcf00360461adf279f45ef5391f8d111892118753e",
+    "tag": "latest",
+    "platforms": [
+      {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      {
+        "architecture": "arm64",
+        "os": "linux"
+      },
+      {
+        "architecture": "arm",
+        "os": "linux",
+        "variant": "v7"
+      },
+      {
+        "architecture": "ppc64le",
+        "os": "linux"
+      },
+      {
+        "architecture": "riscv64",
+        "os": "linux"
+      },
+      {
+        "architecture": "s390x",
+        "os": "linux"
+      }
+    ],
+    "metadata": {
+      "Env": [
+        "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      ],
+      "Labels": {
+        "io.prometheus.image.variant": "busybox",
+        "maintainer": "The Prometheus Authors <prometheus-developers@googlegroups.com>",
+        "org.opencontainers.image.authors": "The Prometheus Authors",
+        "org.opencontainers.image.description": "The Prometheus monitoring system and time series database",
+        "org.opencontainers.image.documentation": "https://prometheus.io/docs",
+        "org.opencontainers.image.licenses": "Apache License 2.0",
+        "org.opencontainers.image.source": "https://github.com/prometheus/prometheus",
+        "org.opencontainers.image.title": "Prometheus",
+        "org.opencontainers.image.url": "https://github.com/prometheus/prometheus",
+        "org.opencontainers.image.vendor": "Prometheus"
+      }
+    },
+    "verified_at": "2026-10-04",
+    "verification": "registry index/config amd64 inspected; container execution not performed",
+    "version": "3.15.0"
+  },
+  "grafana": {
+    "image": "docker.io/grafana/grafana@sha256:b28bae15e219c998fb0e0424ed724930cc61b1f61fb404d47c862f9a23f9e572",
+    "tag": "latest",
+    "platforms": [
+      {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      {
+        "architecture": "arm64",
+        "os": "linux"
+      },
+      {
+        "architecture": "arm",
+        "os": "linux",
+        "variant": "v7"
+      }
+    ],
+    "metadata": {
+      "Env": [
+        "PATH=/usr/share/grafana/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "GF_PATHS_CONFIG=/etc/grafana/grafana.ini",
+        "GF_PATHS_DATA=/var/lib/grafana",
+        "GF_PATHS_HOME=/usr/share/grafana",
+        "GF_PATHS_LOGS=/var/log/grafana",
+        "GF_PATHS_PLUGINS=/var/lib/grafana/plugins",
+        "GF_PATHS_PROVISIONING=/etc/grafana/provisioning"
+      ],
+      "Labels": {
+        "maintainer": "Grafana Labs <hello@grafana.com>",
+        "org.opencontainers.image.source": "https://github.com/grafana/grafana"
+      }
+    },
+    "verified_at": "2026-10-04",
+    "verification": "registry index/config amd64 inspected; container execution not performed",
+    "version": "not-yet-extracted; digest fixed"
+  },
+  "blackbox": {
+    "image": "docker.io/prom/blackbox-exporter@sha256:e753ff9f3fc458d02cca5eddab5a77e1c175eee484a8925ac7d524f04366c2fc",
+    "tag": "latest",
+    "platforms": [
+      {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      {
+        "architecture": "arm64",
+        "os": "linux"
+      },
+      {
+        "architecture": "arm",
+        "os": "linux",
+        "variant": "v7"
+      },
+      {
+        "architecture": "ppc64le",
+        "os": "linux"
+      }
+    ],
+    "metadata": {
+      "Env": [
+        "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      ],
+      "Labels": {
+        "maintainer": "The Prometheus Authors <prometheus-developers@googlegroups.com>"
+      }
+    },
+    "verified_at": "2026-10-04",
+    "verification": "registry index/config amd64 inspected; container execution not performed",
+    "version": "0.28.0"
+  },
+  "node": {
+    "image": "docker.io/prom/node-exporter@sha256:1b4e4438faca4dd7e001dd445d161a4a2091b0fededa84093b3a8dfeae1f1be0",
+    "tag": "latest",
+    "platforms": [
+      {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      {
+        "architecture": "arm64",
+        "os": "linux"
+      },
+      {
+        "architecture": "arm",
+        "os": "linux",
+        "variant": "v7"
+      },
+      {
+        "architecture": "ppc64le",
+        "os": "linux"
+      },
+      {
+        "architecture": "riscv64",
+        "os": "linux"
+      },
+      {
+        "architecture": "s390x",
+        "os": "linux"
+      }
+    ],
+    "metadata": {
+      "Env": [
+        "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      ],
+      "Labels": {
+        "io.prometheus.image.variant": "busybox",
+        "maintainer": "The Prometheus Authors <prometheus-developers@googlegroups.com>",
+        "org.opencontainers.image.authors": "The Prometheus Authors",
+        "org.opencontainers.image.description": "Prometheus exporter for hardware and OS metrics exposed by *NIX kernels",
+        "org.opencontainers.image.documentation": "https://github.com/prometheus/node_exporter",
+        "org.opencontainers.image.licenses": "Apache License 2.0",
+        "org.opencontainers.image.source": "https://github.com/prometheus/node_exporter",
+        "org.opencontainers.image.title": "node_exporter",
+        "org.opencontainers.image.url": "https://github.com/prometheus/node_exporter",
+        "org.opencontainers.image.vendor": "Prometheus"
+      }
+    },
+    "verified_at": "2026-10-04",
+    "verification": "registry index/config amd64 inspected; container execution not performed",
+    "version": "1.12.1"
+  }
+}

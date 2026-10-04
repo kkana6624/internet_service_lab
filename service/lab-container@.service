@@ -1,0 +1,17 @@
+[Unit]
+Description=Lab Podman container %i
+Wants=network-online.target
+After=network-online.target lab-firewall.service
+Requires=lab-firewall.service
+[Service]
+Type=simple
+EnvironmentFile=/etc/lab/units/%i.env
+ExecStartPre=-/usr/bin/podman rm -f lab-%i
+ExecStart=/usr/local/libexec/lab-container %i
+ExecStop=/usr/bin/podman stop -t 30 lab-%i
+Restart=always
+RestartSec=5
+TimeoutStartSec=600
+TimeoutStopSec=45
+[Install]
+WantedBy=multi-user.target

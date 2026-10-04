@@ -1,0 +1,42 @@
+rule_files:
+  - ../monitoring/prometheus/alerts.yml
+evaluation_interval: 15s
+tests:
+  - name: healthy baseline does not alert
+    interval: 15s
+    input_series:
+      - series: 'probe_success{job="blackbox",instance="http://10.42.1.10/"}'
+        values: '1+0x8'
+      - series: 'probe_duration_seconds{job="blackbox",instance="http://10.42.1.10/"}'
+        values: '0.1+0x8'
+      - series: 'up{job="blackbox",instance="http://10.42.1.10/"}'
+        values: '1+0x8'
+    alert_rule_test:
+      - {eval_time: 1m, alertname: ProbeFailed, exp_alerts: []}
+      - {eval_time: 1m, alertname: ScrapeDown, exp_alerts: []}
+      - {eval_time: 1m, alertname: ProbeSlow, exp_alerts: []}
+  - name: failed probes are distinct from failed scrapes
+    interval: 15s
+    input_series:
+      - series: 'probe_success{job="blackbox",instance="http://10.42.1.10/"}'
+        values: '0+0x8'
+      - series: 'up{job="blackbox",instance="http://10.42.1.10/"}'
+        values: '1+0x8'
+    alert_rule_test:
+      - eval_time: 1m
+        alertname: ProbeFailed
+        exp_alerts:
+          - exp_labels: {job: blackbox, instance: 'http://10.42.1.10/', severity: warning}
+            exp_annotations: {summary: 'Internal HTTP probe failed: http://10.42.1.10/'}
+      - {eval_time: 1m, alertname: ScrapeDown, exp_alerts: []}
+  - name: single delayed probe activates slow alert
+    interval: 15s
+    input_series:
+      - series: 'probe_duration_seconds{job="blackbox",instance="http://10.42.1.10:8081/experiment"}'
+        values: '2+0x8'
+    alert_rule_test:
+      - eval_time: 1m
+        alertname: ProbeSlow
+        exp_alerts:
+          - exp_labels: {job: blackbox, instance: 'http://10.42.1.10:8081/experiment', severity: warning}
+            exp_annotations: {summary: 'Single internal probe duration exceeds 1 second'}
