@@ -1,0 +1,569 @@
+{
+  "utc": "2026-10-04T10:35:57.291398+00:00",
+  "commit": "uncommitted",
+  "working_tree_has_changes": true,
+  "kind": "measured-local-validation",
+  "conditions": "Local host only; VM filesystem and process calls mocked; no cloud, container runtime, public reachability, restart or deletion validation",
+  "versions": {
+    "python": "3.9.25"
+  },
+  "source_sha256": {
+    "images.lock.json": "ae26558bb732c8198de32908513699c2b54d4cd90e683f862c4cc79c354712c2",
+    "monitoring/blackbox.yml": "f0dc687657d7cab3286bb218d1c80ceb73300b0c99386a40efdafb1000bfe706",
+    "monitoring/grafana/dashboards/lifecycle.json": "d677ae716a1fb7f7566fc68ff4a763099a4ecd9a39a7cc75987592a2870a9b42",
+    "monitoring/grafana/provisioning/dashboards/lab.yml": "7defaa4dd00b2f42e72d60be62518c810b8ce772964322b633a18e387beefecf",
+    "monitoring/grafana/provisioning/datasources/prometheus.yml": "e683e23490cffddd7ef2fbb4b0d13f201e899df937da142309940e3b508d4aab",
+    "monitoring/prometheus/alerts.yml": "f6e38cb4e0ae62e82210376bfcc4b78d3d15fca6b860bb5335df2f5932bb3562",
+    "monitoring/prometheus/prometheus.yml": "c9db00f5f13d54bd8f87a847c13a5bea1f650808559ee38f6da4c38229d66711",
+    "scripts/anomaly-start.sh": "bfa76dc93a21a1cbcffc0741de0baa4f23597ac1a057778ce4b5ab3d987128da",
+    "scripts/anomaly-stop.sh": "6f27eb6d724fd600f5b8a5cbbbd53bdc35a2fe8186965e4c3cbb35d2a47e5ad9",
+    "scripts/apply-vm.py": "3fd8438bf8b6dd8d15536aac59eaf7e97437664702b796d288721004a7c2d7ae",
+    "scripts/backup.sh": "6b13c20870ff84328e79bc3ce345c3702d661f94244e8d51d5c6ce1f6f25d937",
+    "scripts/bootstrap.sh": "cbc4d792120e8dea0d5f8f321516e3d47b0fef3977676f62a4546cbe5166d0b9",
+    "scripts/check-targets.py": "86636a8c7bc0226feed98c1e6185a0e443a61ab6e3b13c78ac8c47b7eeb2a733",
+    "scripts/cleanup.sh": "dac1d0306c904f8f4e732fa81dadb2568a457068f6a3e2c4f4973254ad9bcdf2",
+    "scripts/collect-evidence.sh": "6edd04d0d4c07c3c3a23c8bc3f8a1b64cab51bf44f4c73e851512c5832091e6e",
+    "scripts/common.sh": "a2348c8c4ad96b3e110928dbba796f48e94d9dc7f2540fb17e08658d5d133fa8",
+    "scripts/container-runner.py": "b6b468dc7dddac8e2460bcbdaf3a8e3310a9f40b035bc4e93e09f8e797ee3ba6",
+    "scripts/deploy-stage.sh": "21b6768091249cf9022be6747a603dc462333fefe62047e13a48fb6161ad405b",
+    "scripts/evidence.py": "591b1b102f8a44ca00ec44976ee48c43f295161d0a1476e43730a3d143c4a009",
+    "scripts/lock-images.py": "ca64a581610f78814ced18cd7a26c48f16d8820d7df55306e3a97a39deb815b6",
+    "scripts/measure.sh": "6aa63f49519c8cbccff9b1de1a237e22c0ffd922338f3f1028977ad25a202050",
+    "scripts/preflight.sh": "7cb3c491bc47c9a0b72b03d6e94d544575407912c6e3e56062252cee5420aa41",
+    "scripts/residuals.py": "a238c90f5531a18efefc2952922b47d925eaa05c7411eb9d4c604086f5f36608",
+    "scripts/restore.sh": "d1f9abfc19116ec0c5ce2ad0def22803326d51ffb02c9c2598b06d59403eca9b",
+    "scripts/save-context.py": "ba9f523c647fae4e49ad48ae3d8efbacff2624ee312ccf2dbcb4a45f207668eb",
+    "scripts/stop-public.sh": "0470ae8ec71ef325e92ff39218c8fffcd994abff7b3b47ea3dc7dbd951a8f872",
+    "scripts/verify-stage.sh": "52cf020d123493779201885eb3694f87a232112c1a226d8ae2c6c18fa4f3656d",
+    "scripts/wait-ready.sh": "80acacd632991eb10ed3aa131dea19d5f6f329456d394e37540ebd26d3eab98f",
+    "service/__pycache__/experiment.cpython-39.pyc": "be5b2dc1444deff9c01b907b6088acb1242094701610fa0a6c3773035d61ca0f",
+    "service/experiment.py": "31d524361f32e478dd8c5b6fd0e8f8524eb8c80384f079b078130d1c065717da",
+    "service/lab-container@.service": "909d867c6ae497ce832ec85366350a46c9cf8f42c7e90e6009177c704a931e1c",
+    "service/nginx/nginx.conf": "1332f18c7b782f1909b09a25c5447a406e3de86990f20f68596ad23985de23a7",
+    "terraform/.terraform.lock.hcl": "898cad70afe23777669e8fbd601f9ebfc9e71978e175c3d08b7845d3e68eac78",
+    "terraform/compute.tf": "0c42fae3854819c38800ae81c4d8620403a0e8dc25b476d307a066101da29c60",
+    "terraform/modules/vm/cloud-init.yaml": "10883748cacc2cf7e4fba018c00bb4f00b77e003c65b312d8f450c23a4fdf360",
+    "terraform/modules/vm/main.tf": "ba0e38d698e1dd394edde29eb3f40d31237dff4b685d751670f996525b050f51",
+    "terraform/modules/vm/variables.tf": "2f47a776a7409cac00fbad9da119f5ec515815d366110803830ab314cf7464ab",
+    "terraform/network.tf": "ac7f57298d8502014b690bbdcaed876dc2d7e85f91999dbf4930ad18897c1938",
+    "terraform/outputs.tf": "e69f3afc24e23d0828e6cc61bd2031f8a2f570b2a1c61e062485d061d3db6dac",
+    "terraform/provider.tf": "ae2d030fd208bf4176af8882b956868f3a263e7a500d4c9c7677e4ba6d54fab5",
+    "terraform/security.tf": "bf6fd70282ed06629956b8af116e1e4f0b44f10a0e8a4f21325aadb0f2fd3629",
+    "terraform/variables.tf": "8b367353b0bc7bfd15e8ddf177e94dd9a499c71e24323303302085a6819546cf",
+    "terraform/versions.tf": "2181cb38d5b44dd0ef103127a951ba007240eb16e163d7569f2642c435ee1b8f",
+    "tests/README.md": "c21aeaae9b8db41b49984e0728f54ee7fc81ae1891f251b24cd128fd62200ec3",
+    "tests/prometheus-rules.yml": "abbd80877dc97bd5757ed3def27af40c33edb269a4d9f1e95621501badd8f804",
+    "tests/test_public_gate.py": "2cc473ece232985d4d43a122d2efaa1c9903754f012ee0427c3e0b70c8972a9b",
+    "tests/test_targets.py": "b4e5f939e792135a74147eee235cc16d8e5394a0ae7244c79c91cb3eaf1a103f",
+    "tests/test_vm_generation.py": "0f2516a115917c9e72d7ec65b9eb908537c3823ef8f535dd49bd95ccd6da92a4",
+    "tests/verify-local.py": "0f5bd16b29e16f27518582a0ea391a1dd73feb9d0f7c82e7ca1cb1a2f7a56530"
+  },
+  "entries": [
+    {
+      "check": "mocked VM configuration safety and repeat application",
+      "status": "measured",
+      "utc": "2026-10-04T10:35:56.472841+00:00",
+      "command": [
+        "/usr/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "/home/kkana/repo/internet_service_lab",
+      "exit_code": 0,
+      "output": "test_exact_success_marker_reaches_next_stage_check (test_public_gate.PublicInstallationGate) ... ok\ntest_extra_output_around_success_marker_is_refused (test_public_gate.PublicInstallationGate) ... ok\ntest_nonzero_exit_with_success_marker_is_refused (test_public_gate.PublicInstallationGate) ... ok\ntest_zero_exit_with_database_error_page_is_refused (test_public_gate.PublicInstallationGate) ... ok\ntest_zero_exit_without_output_is_refused (test_public_gate.PublicInstallationGate) ... ok\ntest_all_expected_healthy (test_targets.TargetHealth) ... ok\ntest_api_success_is_insufficient_with_down_target (test_targets.TargetHealth) ... ok\ntest_api_success_is_insufficient_with_empty_targets (test_targets.TargetHealth) ... ok\ntest_missing_job_is_failure (test_targets.TargetHealth) ... ok\ntest_failed_image_pull_does_not_claim_stage_completion (test_vm_generation.VMGeneration) ... ok\ntest_monitoring_loopback_and_file_secret (test_vm_generation.VMGeneration) ... ok\ntest_private_web_includes_monitor_and_excludes_public_source (test_vm_generation.VMGeneration) ... ok\ntest_protection_and_containment (test_vm_generation.VMGeneration) ... ok\ntest_reject_world_management_before_mutation (test_vm_generation.VMGeneration) ... ok\ntest_secrets_reused_and_never_in_container_arguments (test_vm_generation.VMGeneration) ... ok\ntest_stage_one_persists_stage_without_containers (test_vm_generation.VMGeneration) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 0.281s\n\nOK\n",
+      "processing": "none; local validation output; no VM logs"
+    },
+    {
+      "check": "shell syntax: anomaly-start.sh",
+      "status": "measured",
+      "utc": "2026-10-04T10:35:56.476726+00:00",
+      "command": [
+        "bash",
+        "-n",
+        "/home/kkana/repo/internet_service_lab/scripts/anomaly-start.sh"
+      ],
+      "cwd": "/home/kkana/repo/internet_service_lab",
+      "exit_code": 0,
+      "output": "",
+      "processing": "none; local validation output; no VM logs"
+    },
+    {
+      "check": "shell syntax: anomaly-stop.sh",
+      "status": "measured",
+      "utc": "2026-10-04T10:35:56.479847+00:00",
+      "command": [
+        "bash",
+        "-n",
+        "/home/kkana/repo/internet_service_lab/scripts/anomaly-stop.sh"
+      ],
+      "cwd": "/home/kkana/repo/internet_service_lab",
+      "exit_code": 0,
+      "output": "",
+      "processing": "none; local validation output; no VM logs"
+    },
+    {
+      "check": "shell syntax: backup.sh",
+      "status": "measured",
+      "utc": "2026-10-04T10:35:56.481903+00:00",
+      "command": [
+        "bash",
+        "-n",
+        "/home/kkana/repo/internet_service_lab/scripts/backup.sh"
+      ],
+      "cwd": "/home/kkana/repo/internet_service_lab",
+      "exit_code": 0,
+      "output": "",
+      "processing": "none; local validation output; no VM logs"
+    },
+    {
+      "check": "shell syntax: bootstrap.sh",
+      "status": "measured",
+      "utc": "2026-10-04T10:35:56.483975+00:00",
+      "command": [
+        "bash",
+        "-n",
+        "/home/kkana/repo/internet_service_lab/scripts/bootstrap.sh"
+      ],
+      "cwd": "/home/kkana/repo/internet_service_lab",
+      "exit_code": 0,
+      "output": "",
+      "processing": "none; local validation output; no VM logs"
+    },
+    {
+      "check": "shell syntax: cleanup.sh",
+      "status": "measured",
+      "utc": "2026-10-04T10:35:56.485895+00:00",
+      "command": [
+        "bash",
+        "-n",
+        "/home/kkana/repo/internet_service_lab/scripts/cleanup.sh"
+      ],
+      "cwd": "/home/kkana/repo/internet_service_lab",
+      "exit_code": 0,
+      "output": "",
+      "processing": "none; local validation output; no VM logs"
+    },
+    {
+      "check": "shell syntax: collect-evidence.sh",
+      "status": "measured",
+      "utc": "2026-10-04T10:35:56.487884+00:00",
+      "command": [
+        "bash",
+        "-n",
+        "/home/kkana/repo/internet_service_lab/scripts/collect-evidence.sh"
+      ],
+      "cwd": "/home/kkana/repo/internet_service_lab",
+      "exit_code": 0,
+      "output": "",
+      "processing": "none; local validation output; no VM logs"
+    },
+    {
+      "check": "shell syntax: common.sh",
+      "status": "measured",
+      "utc": "2026-10-04T10:35:56.489810+00:00",
+      "command": [
+        "bash",
+        "-n",
+        "/home/kkana/repo/internet_service_lab/scripts/common.sh"
+      ],
+      "cwd": "/home/kkana/repo/internet_service_lab",
+      "exit_code": 0,
+      "output": "",
+      "processing": "none; local validation output; no VM logs"
+    },
+    {
+      "check": "shell syntax: deploy-stage.sh",
+      "status": "measured",
+      "utc": "2026-10-04T10:35:56.491876+00:00",
+      "command": [
+        "bash",
+        "-n",
+        "/home/kkana/repo/internet_service_lab/scripts/deploy-stage.sh"
+      ],
+      "cwd": "/home/kkana/repo/internet_service_lab",
+      "exit_code": 0,
+      "output": "",
+      "processing": "none; local validation output; no VM logs"
+    },
+    {
+      "check": "shell syntax: measure.sh",
+      "status": "measured",
+      "utc": "2026-10-04T10:35:56.494004+00:00",
+      "command": [
+        "bash",
+        "-n",
+        "/home/kkana/repo/internet_service_lab/scripts/measure.sh"
+      ],
+      "cwd": "/home/kkana/repo/internet_service_lab",
+      "exit_code": 0,
+      "output": "",
+      "processing": "none; local validation output; no VM logs"
+    },
+    {
+      "check": "shell syntax: preflight.sh",
+      "status": "measured",
+      "utc": "2026-10-04T10:35:56.496021+00:00",
+      "command": [
+        "bash",
+        "-n",
+        "/home/kkana/repo/internet_service_lab/scripts/preflight.sh"
+      ],
+      "cwd": "/home/kkana/repo/internet_service_lab",
+      "exit_code": 0,
+      "output": "",
+      "processing": "none; local validation output; no VM logs"
+    },
+    {
+      "check": "shell syntax: restore.sh",
+      "status": "measured",
+      "utc": "2026-10-04T10:35:56.497970+00:00",
+      "command": [
+        "bash",
+        "-n",
+        "/home/kkana/repo/internet_service_lab/scripts/restore.sh"
+      ],
+      "cwd": "/home/kkana/repo/internet_service_lab",
+      "exit_code": 0,
+      "output": "",
+      "processing": "none; local validation output; no VM logs"
+    },
+    {
+      "check": "shell syntax: stop-public.sh",
+      "status": "measured",
+      "utc": "2026-10-04T10:35:56.499921+00:00",
+      "command": [
+        "bash",
+        "-n",
+        "/home/kkana/repo/internet_service_lab/scripts/stop-public.sh"
+      ],
+      "cwd": "/home/kkana/repo/internet_service_lab",
+      "exit_code": 0,
+      "output": "",
+      "processing": "none; local validation output; no VM logs"
+    },
+    {
+      "check": "shell syntax: verify-stage.sh",
+      "status": "measured",
+      "utc": "2026-10-04T10:35:56.501813+00:00",
+      "command": [
+        "bash",
+        "-n",
+        "/home/kkana/repo/internet_service_lab/scripts/verify-stage.sh"
+      ],
+      "cwd": "/home/kkana/repo/internet_service_lab",
+      "exit_code": 0,
+      "output": "",
+      "processing": "none; local validation output; no VM logs"
+    },
+    {
+      "check": "shell syntax: wait-ready.sh",
+      "status": "measured",
+      "utc": "2026-10-04T10:35:56.503850+00:00",
+      "command": [
+        "bash",
+        "-n",
+        "/home/kkana/repo/internet_service_lab/scripts/wait-ready.sh"
+      ],
+      "cwd": "/home/kkana/repo/internet_service_lab",
+      "exit_code": 0,
+      "output": "",
+      "processing": "none; local validation output; no VM logs"
+    },
+    {
+      "check": "Python AST: scripts/apply-vm.py",
+      "status": "measured",
+      "command": [
+        "ast.parse",
+        "scripts/apply-vm.py"
+      ],
+      "exit_code": 0,
+      "processing": "none",
+      "utc": "2026-10-04T10:35:57.291398+00:00"
+    },
+    {
+      "check": "Python AST: scripts/check-targets.py",
+      "status": "measured",
+      "command": [
+        "ast.parse",
+        "scripts/check-targets.py"
+      ],
+      "exit_code": 0,
+      "processing": "none",
+      "utc": "2026-10-04T10:35:57.291398+00:00"
+    },
+    {
+      "check": "Python AST: scripts/container-runner.py",
+      "status": "measured",
+      "command": [
+        "ast.parse",
+        "scripts/container-runner.py"
+      ],
+      "exit_code": 0,
+      "processing": "none",
+      "utc": "2026-10-04T10:35:57.291398+00:00"
+    },
+    {
+      "check": "Python AST: scripts/evidence.py",
+      "status": "measured",
+      "command": [
+        "ast.parse",
+        "scripts/evidence.py"
+      ],
+      "exit_code": 0,
+      "processing": "none",
+      "utc": "2026-10-04T10:35:57.291398+00:00"
+    },
+    {
+      "check": "Python AST: scripts/lock-images.py",
+      "status": "measured",
+      "command": [
+        "ast.parse",
+        "scripts/lock-images.py"
+      ],
+      "exit_code": 0,
+      "processing": "none",
+      "utc": "2026-10-04T10:35:57.291398+00:00"
+    },
+    {
+      "check": "Python AST: scripts/residuals.py",
+      "status": "measured",
+      "command": [
+        "ast.parse",
+        "scripts/residuals.py"
+      ],
+      "exit_code": 0,
+      "processing": "none",
+      "utc": "2026-10-04T10:35:57.291398+00:00"
+    },
+    {
+      "check": "Python AST: scripts/save-context.py",
+      "status": "measured",
+      "command": [
+        "ast.parse",
+        "scripts/save-context.py"
+      ],
+      "exit_code": 0,
+      "processing": "none",
+      "utc": "2026-10-04T10:35:57.291398+00:00"
+    },
+    {
+      "check": "Python AST: service/experiment.py",
+      "status": "measured",
+      "command": [
+        "ast.parse",
+        "service/experiment.py"
+      ],
+      "exit_code": 0,
+      "processing": "none",
+      "utc": "2026-10-04T10:35:57.291398+00:00"
+    },
+    {
+      "check": "Python AST: tests/test_public_gate.py",
+      "status": "measured",
+      "command": [
+        "ast.parse",
+        "tests/test_public_gate.py"
+      ],
+      "exit_code": 0,
+      "processing": "none",
+      "utc": "2026-10-04T10:35:57.291398+00:00"
+    },
+    {
+      "check": "Python AST: tests/test_targets.py",
+      "status": "measured",
+      "command": [
+        "ast.parse",
+        "tests/test_targets.py"
+      ],
+      "exit_code": 0,
+      "processing": "none",
+      "utc": "2026-10-04T10:35:57.291398+00:00"
+    },
+    {
+      "check": "Python AST: tests/test_vm_generation.py",
+      "status": "measured",
+      "command": [
+        "ast.parse",
+        "tests/test_vm_generation.py"
+      ],
+      "exit_code": 0,
+      "processing": "none",
+      "utc": "2026-10-04T10:35:57.291398+00:00"
+    },
+    {
+      "check": "Python AST: tests/verify-local.py",
+      "status": "measured",
+      "command": [
+        "ast.parse",
+        "tests/verify-local.py"
+      ],
+      "exit_code": 0,
+      "processing": "none",
+      "utc": "2026-10-04T10:35:57.291398+00:00"
+    },
+    {
+      "check": "JSON decode: images.lock.json",
+      "status": "measured",
+      "command": [
+        "json.loads",
+        "images.lock.json"
+      ],
+      "exit_code": 0,
+      "processing": "none",
+      "utc": "2026-10-04T10:35:57.291398+00:00"
+    },
+    {
+      "check": "JSON decode: monitoring/grafana/dashboards/lifecycle.json",
+      "status": "measured",
+      "command": [
+        "json.loads",
+        "monitoring/grafana/dashboards/lifecycle.json"
+      ],
+      "exit_code": 0,
+      "processing": "none",
+      "utc": "2026-10-04T10:35:57.291398+00:00"
+    },
+    {
+      "check": "Terraform version",
+      "status": "measured",
+      "utc": "2026-10-04T10:35:56.548130+00:00",
+      "command": [
+        "/usr/bin/terraform",
+        "version"
+      ],
+      "cwd": "/home/kkana/repo/internet_service_lab",
+      "exit_code": 0,
+      "output": "Terraform v1.16.5\non linux_amd64\n",
+      "processing": "none; local validation output; no VM logs"
+    },
+    {
+      "check": "Terraform formatting",
+      "status": "measured",
+      "utc": "2026-10-04T10:35:56.593157+00:00",
+      "command": [
+        "/usr/bin/terraform",
+        "-chdir=/home/kkana/repo/internet_service_lab/terraform",
+        "fmt",
+        "-check",
+        "-recursive"
+      ],
+      "cwd": "/home/kkana/repo/internet_service_lab",
+      "exit_code": 0,
+      "output": "",
+      "processing": "none; local validation output; no VM logs"
+    },
+    {
+      "check": "Terraform validate (requires prior init)",
+      "status": "failed",
+      "utc": "2026-10-04T10:35:56.997440+00:00",
+      "command": [
+        "/usr/bin/terraform",
+        "-chdir=/home/kkana/repo/internet_service_lab/terraform",
+        "validate"
+      ],
+      "cwd": "/home/kkana/repo/internet_service_lab",
+      "exit_code": 1,
+      "output": "\u001b[31m╷\u001b[0m\u001b[0m\n\u001b[31m│\u001b[0m \u001b[0m\u001b[1m\u001b[31mError: \u001b[0m\u001b[0m\u001b[1mFailed to load plugin schemas\u001b[0m\n\u001b[31m│\u001b[0m \u001b[0m\n\u001b[31m│\u001b[0m \u001b[0m\u001b[0mError while loading schemas for plugin components: Failed to obtain\n\u001b[31m│\u001b[0m \u001b[0mprovider schema: Could not load the schema for provider\n\u001b[31m│\u001b[0m \u001b[0mregistry.terraform.io/oracle/oci: failed to instantiate provider\n\u001b[31m│\u001b[0m \u001b[0m\"registry.terraform.io/oracle/oci\" to obtain schema: Unrecognized remote\n\u001b[31m│\u001b[0m \u001b[0mplugin message: \n\u001b[31m│\u001b[0m \u001b[0mFailed to read any lines from plugin's stdout\n\u001b[31m│\u001b[0m \u001b[0mThis usually means\n\u001b[31m│\u001b[0m \u001b[0m  the plugin was not compiled for this architecture,\n\u001b[31m│\u001b[0m \u001b[0m  the plugin is missing dynamic-link libraries necessary to run,\n\u001b[31m│\u001b[0m \u001b[0m  the plugin is not executable by this process due to file permissions, or\n\u001b[31m│\u001b[0m \u001b[0m  the plugin failed to negotiate the initial go-plugin protocol handshake\n\u001b[31m│\u001b[0m \u001b[0m\n\u001b[31m│\u001b[0m \u001b[0mAdditional notes about plugin:\n\u001b[31m│\u001b[0m \u001b[0m  Path: .terraform/providers/registry.terraform.io/oracle/oci/7.32.0/linux_amd64/terraform-provider-oci_v7.32.0\n\u001b[31m│\u001b[0m \u001b[0m  Mode: -rwxr-xr-x\n\u001b[31m│\u001b[0m \u001b[0m  Owner: 1000 [kkana] (current: 1000 [kkana])\n\u001b[31m│\u001b[0m \u001b[0m  Group: 1000 [kkana] (current: 1000 [kkana])\n\u001b[31m│\u001b[0m \u001b[0m  ELF architecture: EM_X86_64 (current architecture: amd64)\n\u001b[31m│\u001b[0m \u001b[0m..\n\u001b[31m╵\u001b[0m\u001b[0m\n",
+      "processing": "none; local validation output; no VM logs"
+    },
+    {
+      "check": "promtool version",
+      "status": "measured",
+      "utc": "2026-10-04T10:35:57.094957+00:00",
+      "command": [
+        "/tmp/lab-tools/prometheus-promtool",
+        "--version"
+      ],
+      "cwd": "/home/kkana/repo/internet_service_lab",
+      "exit_code": 0,
+      "output": "promtool, version 3.15.0 (branch: HEAD, revision: 5241a27fe3c6983549fccc32f6e65917408c63cd)\n  build user:       root@4635dd007a60\n  build date:       20260925-07:33:45\n  go version:       go1.27.1\n  platform:         linux/amd64\n  tags:             netgo,builtinassets\n",
+      "processing": "none; local validation output; no VM logs"
+    },
+    {
+      "check": "Prometheus alert syntax",
+      "status": "measured",
+      "utc": "2026-10-04T10:35:57.124527+00:00",
+      "command": [
+        "/tmp/lab-tools/prometheus-promtool",
+        "check",
+        "rules",
+        "/home/kkana/repo/internet_service_lab/monitoring/prometheus/alerts.yml"
+      ],
+      "cwd": "/home/kkana/repo/internet_service_lab",
+      "exit_code": 0,
+      "output": "Checking /home/kkana/repo/internet_service_lab/monitoring/prometheus/alerts.yml\n  SUCCESS: 4 rules found\n\n",
+      "processing": "none; local validation output; no VM logs"
+    },
+    {
+      "check": "Prometheus alert behavior",
+      "status": "measured",
+      "utc": "2026-10-04T10:35:57.200018+00:00",
+      "command": [
+        "/tmp/lab-tools/prometheus-promtool",
+        "test",
+        "rules",
+        "prometheus-rules.yml"
+      ],
+      "cwd": "/home/kkana/repo/internet_service_lab/tests",
+      "exit_code": 0,
+      "output": "  SUCCESS\n\n",
+      "processing": "none; local validation output; no VM logs"
+    },
+    {
+      "check": "Prometheus generated configuration",
+      "status": "measured",
+      "utc": "2026-10-04T10:35:57.235944+00:00",
+      "command": [
+        "/tmp/lab-tools/prometheus-promtool",
+        "check",
+        "config",
+        "/tmp/tmp_6bx5mf3/prometheus.yml"
+      ],
+      "cwd": "/home/kkana/repo/internet_service_lab",
+      "exit_code": 0,
+      "output": "Checking /tmp/tmp_6bx5mf3/prometheus.yml\n  SUCCESS: 1 rule files found\n SUCCESS: /tmp/tmp_6bx5mf3/prometheus.yml is valid prometheus config file syntax\n\nChecking /home/kkana/repo/internet_service_lab/monitoring/prometheus/alerts.yml\n  SUCCESS: 4 rules found\n\n",
+      "processing": "none; local validation output; no VM logs"
+    },
+    {
+      "check": "blackbox exporter version",
+      "status": "measured",
+      "utc": "2026-10-04T10:35:57.272748+00:00",
+      "command": [
+        "/tmp/lab-tools/blackbox-blackbox_exporter",
+        "--version"
+      ],
+      "cwd": "/home/kkana/repo/internet_service_lab",
+      "exit_code": 0,
+      "output": "blackbox_exporter, version 0.28.0 (branch: HEAD, revision: 5a059bee8d8ffa4e75947c5055fb0abeefc582e6)\n  build user:       root@967d444a1ba3\n  build date:       20251206-13:23:49\n  go version:       go1.25.5\n  platform:         linux/amd64\n  tags:             unknown\n",
+      "processing": "none; local validation output; no VM logs"
+    },
+    {
+      "check": "blackbox configuration",
+      "status": "measured",
+      "utc": "2026-10-04T10:35:57.283146+00:00",
+      "command": [
+        "/tmp/lab-tools/blackbox-blackbox_exporter",
+        "--config.file=/home/kkana/repo/internet_service_lab/monitoring/blackbox.yml",
+        "--config.check"
+      ],
+      "cwd": "/home/kkana/repo/internet_service_lab",
+      "exit_code": 0,
+      "output": "time=2026-10-04T19:35:57.282+09:00 level=INFO source=main.go:98 msg=\"Starting blackbox_exporter\" version=\"(version=0.28.0, branch=HEAD, revision=5a059bee8d8ffa4e75947c5055fb0abeefc582e6)\"\ntime=2026-10-04T19:35:57.282+09:00 level=INFO source=main.go:99 msg=\"(go=go1.25.5, platform=linux/amd64, user=root@967d444a1ba3, date=20251206-13:23:49, tags=unknown)\"\ntime=2026-10-04T19:35:57.282+09:00 level=INFO source=config.go:137 msg=\"Configuration file change detected, reloading the configuration.\"\ntime=2026-10-04T19:35:57.282+09:00 level=INFO source=main.go:107 msg=\"Config file is ok exiting...\"\n",
+      "processing": "none; local validation output; no VM logs"
+    }
+  ],
+  "unverified": [
+    "OCI create/apply/destroy",
+    "Podman image startup",
+    "systemd reboot recovery",
+    "SELinux/firewall live enforcement",
+    "database backup and restore",
+    "public access and separate-source denial",
+    "Grafana rendered dashboards"
+  ],
+  "screenshots": "not-acquired"
+}

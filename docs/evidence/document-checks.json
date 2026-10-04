@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-04T10:52:59.375669+00:00",
+  "kind": "measured-local-document-check",
+  "command": "Python pathlib/re scan of local Markdown link targets and code fences",
+  "conditions": "Local filesystem only; external links/anchor text/cloud actions are not validated",
+  "exit_code": 0,
+  "files_checked": 19,
+  "local_links_checked": 54,
+  "errors": [],
+  "processing": "none"
+}

@@ -1,0 +1,14 @@
+# explanatory / 説明用・未適用・実行禁止
+# 実際のTerraformへ適用するpatchではない。架空の比較断片。
+# SSH、DB、Grafana、Prometheusを公開すると何が起きるか考える教材。
+--- safer-settings.example
++++ unsafe-settings.example
+@@ conceptual-only @@
+- SSH 22: admin_cidr
++ SSH 22: 0.0.0.0/0
+- MariaDB 3306: internal container network, no host publish
++ MariaDB 3306: publish 0.0.0.0:3306:3306 and allow 0.0.0.0/0
+- Grafana 3000: 127.0.0.1, SSH tunnel
++ Grafana 3000: 0.0.0.0 and allow 0.0.0.0/0
+- Prometheus 9090: 127.0.0.1
++ Prometheus 9090: 0.0.0.0 and allow 0.0.0.0/0
