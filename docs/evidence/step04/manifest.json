@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "stage": "04",
+  "classification": "not-acquired",
+  "timezone": "UTC",
+  "commit": "uncommitted",
+  "tag": null,
+  "started_at_utc": null,
+  "ended_at_utc": null,
+  "versions": {
+    "local_os": null,
+    "vm_os": null,
+    "terraform": null,
+    "oci_cli": null,
+    "podman": null,
+    "images": "images.lock.json; copy exact deployed digests at collection"
+  },
+  "conditions": {
+    "source": null,
+    "target": null,
+    "url": null,
+    "samples": 10,
+    "interval_seconds": 2,
+    "timeout_seconds": 5,
+    "user_agent": "lab-controlled-measure"
+  },
+  "entries": [
+    {
+      "artifact": "Web NSG diff",
+      "classification": "not-acquired",
+      "command": null,
+      "exit_code": null,
+      "utc": null,
+      "processing": "none",
+      "reason": "OCI execution and live screenshots not performed"
+    },
+    {
+      "artifact": "external Web/SSH paths",
+      "classification": "not-acquired",
+      "command": null,
+      "exit_code": null,
+      "utc": null,
+      "processing": "none",
+      "reason": "OCI execution and live screenshots not performed"
+    },
+    {
+      "artifact": "observation window and access logs",
+      "classification": "not-acquired",
+      "command": null,
+      "exit_code": null,
+      "utc": null,
+      "processing": "none",
+      "reason": "OCI execution and live screenshots not performed"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "stage": 3,
+  "name": "observability",
+  "terraform_root": "terraform",
+  "state": "same local state throughout",
+  "public_web": false,
+  "expected_components": [
+    "firewall",
+    "node",
+    "mariadb",
+    "wordpress",
+    "nginx",
+    "experiment",
+    "prometheus",
+    "blackbox",
+    "grafana"
+  ],
+  "login_source_restriction": false,
+  "apply_command": "./scripts/deploy-stage.sh 3",
+  "status": "reproduction contract; live acceptance not executed"
+}

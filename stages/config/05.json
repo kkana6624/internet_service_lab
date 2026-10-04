@@ -1,0 +1,21 @@
+{
+  "stage": 5,
+  "name": "secure",
+  "terraform_root": "terraform",
+  "state": "same local state throughout",
+  "public_web": true,
+  "expected_components": [
+    "firewall",
+    "node",
+    "mariadb",
+    "wordpress",
+    "nginx",
+    "experiment",
+    "prometheus",
+    "blackbox",
+    "grafana"
+  ],
+  "login_source_restriction": true,
+  "apply_command": "./scripts/deploy-stage.sh 5",
+  "status": "reproduction contract; live acceptance not executed"
+}

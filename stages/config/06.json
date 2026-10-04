@@ -1,0 +1,11 @@
+{
+  "stage": 6,
+  "name": "cleanup",
+  "terraform_root": "terraform",
+  "state": "same local state throughout",
+  "public_web": false,
+  "expected_components": [],
+  "login_source_restriction": true,
+  "apply_command": "./scripts/cleanup.sh plan; ./scripts/cleanup.sh destroy",
+  "status": "reproduction contract; live acceptance not executed"
+}

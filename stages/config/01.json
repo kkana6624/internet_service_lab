@@ -1,0 +1,13 @@
+{
+  "stage": 1,
+  "name": "infrastructure",
+  "terraform_root": "terraform",
+  "state": "same local state throughout",
+  "public_web": false,
+  "expected_components": [
+    "firewall"
+  ],
+  "login_source_restriction": false,
+  "apply_command": "./scripts/deploy-stage.sh 1",
+  "status": "reproduction contract; live acceptance not executed"
+}
