@@ -1,0 +1,27 @@
+#cloud-config
+package_update: true
+packages:
+  - podman
+  - python3
+  - openssl
+  - curl
+  - tar
+  - firewalld
+  - nftables
+  - policycoreutils
+write_files:
+  - path: /etc/systemd/journald.conf.d/lab.conf
+    permissions: '0644'
+    content: |
+      [Journal]
+      Storage=persistent
+      SystemMaxUse=100M
+      SystemMaxFileSize=20M
+runcmd:
+  # Public host-key fingerprint only; read using authenticated OCI console history.
+  - [bash, -c, 'ssh-keygen -lf /etc/ssh/ssh_host_ed25519_key.pub | sed "s/^/LAB_HOSTKEY /" > /dev/console']
+  - [mkdir, -p, /var/log/journal]
+  - [systemctl, restart, systemd-journald]
+  - [systemctl, enable, --now, firewalld]
+  - [mkdir, -p, /opt/internet-service-lab, /var/lib/lab]
+  - [chmod, '700', /var/lib/lab]

@@ -1,0 +1,11 @@
+variable "role" { type = string }
+variable "compartment_ocid" { type = string }
+variable "availability_domain" { type = string }
+variable "subnet_id" { type = string }
+variable "nsg_id" { type = string }
+variable "image_ocid" { type = string }
+variable "shape" { type = string }
+variable "ocpus" { type = number }
+variable "memory_gbs" { type = number }
+variable "boot_volume_gbs" { type = number }
+variable "ssh_public_key" { type = string }

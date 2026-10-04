@@ -1,0 +1,8 @@
+region = "ap-tokyo-1"
+oci_profile = "internet-service-lab"
+compartment_ocid = "ocid1.compartment.REPLACE"
+availability_domain = "REPLACE:AP-TOKYO-1-AD-1"
+image_ocid = "ocid1.image.REPLACE"
+ssh_public_key_path = "~/.ssh/internet-service-lab.pub"
+admin_cidr = "192.0.2.1/32" # replace with actual management egress IPv4
+public_web = false
